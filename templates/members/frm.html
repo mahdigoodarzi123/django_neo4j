@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Form</title>
+</head>
+<body>
+	<h2>Contact us</h2>
+	<form method="post">
+		{% csrf_token %}
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="name"><br>
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email"><br>
+		<label for="age">age:</label><br>
+		<input type="number" id="age" name="age"><br>
+		<label for="age">number:</label><br>
+		<input type="number" id="phone_number" name="phone_number"><br>
+        <label for="gender">Select your Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+        <input type="file" id="file" name="pdf_file"><br>
+        <input type="date" name="date">
+		<!-- <label for="message">Message:</label><br>
+		<textarea id="message" name="message"></textarea><br> -->
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
